@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comments</h1>
+    <% @comments.each do |comment| %>
+    
+    <div class="card" style="width: 28rem; height: 28rem; margin-top: 2rem;">
+    <%= link_to 'New Comment', new_comment_path %>
+    <br>
+        <div><%= comment.post_id %></div>
+        <%= comment.body %>
+        <%= link_to 'Show', comment %>
+        <%= link_to 'Edit', edit_comment_path(comment) %>
+        <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      </div>
+    <% end %>
+  
+
+
+
+
